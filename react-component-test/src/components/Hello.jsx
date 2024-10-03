@@ -4,8 +4,8 @@ function displayMessage(message) {
   return message;
 }
 
-function sayHi() {
-  return "Hi!";
+function sayHi(name) {
+  return <div>`Hi, ${name}!`;</div>;
 }
 function Hello() {
   return (
