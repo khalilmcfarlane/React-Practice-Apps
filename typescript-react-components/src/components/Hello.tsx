@@ -13,11 +13,30 @@ interface Props {
   emoji?: string;
 }
 function Hello({ name, message, emoji = "" }: Props): React.JSX.Element {
-  let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div>
       <h1>
-        {message} {name}{emoji}!
+        {message} {name}
+        {emoji}!
+      </h1>
+    </div>
+  );
+}
+
+interface PersonProps {
+  person: {
+    name: string;
+    message: string;
+    emoji?: string;
+  };
+}
+
+export function HelloObject({ person }: PersonProps): React.JSX.Element {
+  return (
+    <div>
+      <h1>
+        {person.message} {person.name}
+        {person.emoji}!
       </h1>
     </div>
   );
