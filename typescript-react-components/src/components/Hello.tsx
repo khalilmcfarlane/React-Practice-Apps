@@ -6,12 +6,19 @@ export function SayName({ name }: { name: string }): React.JSX.Element {
   );
 }
 
-function Hello(): React.JSX.Element {
+// It's common to define props as an interface
+interface Props {
+  name: string;
+  message: string;
+  emoji?: string;
+}
+function Hello({ name, message, emoji = "" }: Props): React.JSX.Element {
   let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div>
-      <h1>Hello Khalil!</h1>
-      <div id="Square">I'm going to square numbers from 1 to 10.</div>
+      <h1>
+        {message} {name}{emoji}!
+      </h1>
     </div>
   );
 }

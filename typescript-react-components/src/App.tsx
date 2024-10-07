@@ -10,7 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <Hello />
+      <Hello name="Khalil" message="Hi there"/>
+      <Hello name="John" message="What's up" emoji="👋"/>
       <Button />
       <SayName name="Bot" />
     </div>
