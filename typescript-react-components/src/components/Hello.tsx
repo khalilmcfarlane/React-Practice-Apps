@@ -1,3 +1,4 @@
+import Fruit from "./Fruit";
 export function SayName({ name }: { name: string }): React.JSX.Element {
   return (
     <div>
@@ -38,6 +39,24 @@ export function HelloObject({ person }: PersonProps): React.JSX.Element {
         {person.message} {person.name}
         {person.emoji}!
       </h1>
+    </div>
+  );
+}
+
+export function Fruits() {
+  const fruits = [
+    { name: "apple", price: 3 },
+    { name: "orange", price: 5 },
+    { name: "peach", price: 7 },
+  ];
+  return (
+    <div>
+      <h2>Random fruits</h2>
+      <ul>
+        {fruits.map((fruit) => ( 
+          <Fruit name={fruit.name} price={fruit.price} />
+        ))}
+      </ul>
     </div>
   );
 }

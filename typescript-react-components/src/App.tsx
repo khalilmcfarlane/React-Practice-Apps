@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Hello from "./components/Hello";
-import {HelloObject} from "./components/Hello";
+import {HelloObject, Fruits} from "./components/Hello";
 import { SayName } from "./components/Hello";
+import  {ConditionalRender} from "./components/ConditionalComponent"
 import Button from "./components/Button";
 import SquareNums from "./components/Math";
 import reactLogo from "./assets/react.svg";
@@ -23,6 +24,8 @@ function App() {
       <Button />
       <SayName name="Bot" />
       <SquareNums arr={nums} />
+      <Fruits/>
+      <ConditionalRender />
     </div>
   );
 }
