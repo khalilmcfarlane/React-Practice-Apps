@@ -45,16 +45,17 @@ export function HelloObject({ person }: PersonProps): React.JSX.Element {
 
 export function Fruits() {
   const fruits = [
-    { name: "apple", price: 3 },
-    { name: "orange", price: 5 },
-    { name: "peach", price: 7 },
+    { name: "apple", price: 3, soldOut: false },
+    { name: "orange", price: 5, soldOut: true },
+    { name: "peach", price: 7, soldOut: false },
+    { name: "pineapple", price: 10, soldOut: true},
   ];
   return (
     <div>
       <h2>Random fruits</h2>
       <ul>
         {fruits.map((fruit) => ( 
-          <Fruit name={fruit.name} price={fruit.price} />
+          <Fruit name={fruit.name} price={fruit.price} soldOut={fruit.soldOut}/>
         ))}
       </ul>
     </div>
